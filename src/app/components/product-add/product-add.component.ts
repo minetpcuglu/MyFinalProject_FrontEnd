@@ -35,11 +35,17 @@ categoryId:["",Validators.required]
     if(this.productAddForm.valid){
       let productModel= Object.assign({},this.productAddForm.value) 
       this.productService.add(productModel).subscribe(data=>{
-        console.log(data)
         this.toastrService.success("Ürün ekleme başarılı","Başarılı")
       },dataError=>{
-        console.log(dataError)
-        this.toastrService.error(dataError.error)
+        if(dataError.error.Errors.length>0)
+        {
+          for (let i = 0; i < dataError.error.Errors.length; i++) {
+            this.toastrService.error(dataError.error.Errors[i].ErrorMessage,"Dogrulama hatası");
+            
+          }
+        
+        }
+  
       })
   
     }
