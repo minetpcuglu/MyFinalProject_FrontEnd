@@ -1,6 +1,6 @@
 // import { CommonModule } from '@angular/common';
 
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
@@ -18,6 +18,9 @@ import { CategoryComponent } from './components/category/category.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { VatAddedPipe } from './pipe/vat-added.pipe';
 import { FilterPipePipe } from './pipe/filter-pipe.pipe';
+import { RouterModule } from '@angular/router';
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
+
 
 // import { ToastrModule } from "ngx-toastr";
 
@@ -26,6 +29,7 @@ import { FilterPipePipe } from './pipe/filter-pipe.pipe';
     AppComponent,
     ProductComponent,
     CategoryComponent,
+    CartSummaryComponent,
     NaviComponent,
     VatAddedPipe,
     FilterPipePipe,
@@ -33,6 +37,7 @@ import { FilterPipePipe } from './pipe/filter-pipe.pipe';
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

@@ -1,7 +1,7 @@
 import { Product } from "./product";
 
-export class cartItem{
+export class CartItem{
     product:Product;
-    quantity:Number;
+    quantity:number;
 
 }
