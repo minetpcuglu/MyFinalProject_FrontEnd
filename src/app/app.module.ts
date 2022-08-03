@@ -3,7 +3,7 @@
 import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from "@angular/forms";
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";  //reactive add ile eklendi
 // import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import { CommonModule } from '@angular/common';
@@ -20,6 +20,7 @@ import { VatAddedPipe } from './pipe/vat-added.pipe';
 import { FilterPipePipe } from './pipe/filter-pipe.pipe';
 import { RouterModule } from '@angular/router';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
+import { ProductAddComponent } from './components/product-add/product-add.component';
 
 
 // import { ToastrModule } from "ngx-toastr";
@@ -33,6 +34,8 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
     NaviComponent,
     VatAddedPipe,
     FilterPipePipe,
+    ProductAddComponent,
+
     
   ],
   imports: [
@@ -43,6 +46,7 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
     FormsModule,
     CommonModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-left"
     }
