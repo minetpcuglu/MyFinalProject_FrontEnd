@@ -37,6 +37,9 @@ categoryId:["",Validators.required]
       this.productService.add(productModel).subscribe(data=>{
         console.log(data)
         this.toastrService.success("Ürün ekleme başarılı","Başarılı")
+      },dataError=>{
+        console.log(dataError)
+        this.toastrService.error(dataError.error)
       })
   
     }
